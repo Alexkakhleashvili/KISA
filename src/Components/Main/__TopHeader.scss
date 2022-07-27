@@ -1,0 +1,99 @@
+header { 
+    width: 100%;
+    height: 40%;
+}
+
+.TOP-Header { 
+    width: 90%;
+    height: 40%;
+    margin: 0px auto;
+    @include flex( row , space-between, center);
+    
+    .NAME { 
+        h1 { 
+            Font-family: "GL Gordeziani";
+            color: rgb(23,172,172);
+            Font-size: 56px;
+        }
+    }
+
+    nav {
+        ul { 
+            display: flex;
+            list-style: none;
+
+            li { 
+                cursor: pointer;
+                color: #444444;
+                font-size: 24px;
+                font-weight: 700;
+                Font-family: "GL Tatishvili Metal";
+                // First childr === <li> სახლი </li>
+
+                &:First-child { 
+                    border-radius: 2px;
+                    border-bottom-width: 5px;
+                    border-bottom-style: solid;
+                    border-bottom-color: #178C8C;
+                }
+
+                /*
+                    Select all Elements Except the 
+                    First With the CSS :not(:first-child) 
+                    Selector
+                 */ 
+                &:not(:first-child){ 
+                    margin-left: 50px;
+                }
+            }
+
+            .Become_Teacher { 
+                @include flex(row, center, center);
+                color: #FFFFFF;
+                width: 221px;
+                background-color: #EF233C;
+                border-radius: 10px;
+            }
+
+        }
+    }
+
+    .Account_ShopingCart { 
+        @include flex( row, flex-start, center);
+        
+        .About_Account { 
+            margin-right: 10px;
+            button { 
+                &:first-child { 
+                    font-family: "GL Tatishvili Metal";
+                    color: #2C7575;
+                    font-size: 20px;
+                    border: none;
+
+                    border-radius: 2px;
+                    border-bottom-width: 2px;
+                    border-bottom-style: solid;
+                    border-bottom-color: #178C8C;
+
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+
+                &:nth-child(2) { 
+                    width: 141px;
+                    height: 46px;
+                    background-color: #0E8585;
+                    border-style: none;
+                    border-radius: 5px;
+                    margin-right: 20px;
+
+                    color: #FFFFFF;
+                    font-family: "GL Tatishvili Metal";
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
